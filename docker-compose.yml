@@ -1,0 +1,9 @@
+version: '3'
+services:
+  jenkins-master:
+    build: .
+    ports:
+      - 8888:8080
+      - 50000:50000
+    volumes:
+      - ./jenkins_home:/var/jenkins_home

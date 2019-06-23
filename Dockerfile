@@ -13,6 +13,8 @@ RUN chown jenkins:jenkins /usr/local/go
 USER jenkin 
 ENV PATH $PATH:/usr/local/go/bin 
 
+COPY ./ssh_config /var/jenkins_home/.ssh/config
+
 # Docker Install and Setting
 USER root
 

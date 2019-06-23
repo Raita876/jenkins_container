@@ -13,6 +13,7 @@ RUN chown jenkins:jenkins /usr/local/go
 USER jenkin 
 ENV PATH $PATH:/usr/local/go/bin 
 
+# Docker Install and Setting
 USER root
 
 RUN apt-get update
@@ -27,9 +28,3 @@ RUN apt-get install -y docker-ce vim
 RUN gpasswd -a jenkins docker
 
 RUN echo "jenkins ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
-
-
-
-
-
-
